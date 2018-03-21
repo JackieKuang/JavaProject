@@ -1,0 +1,53 @@
+// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 2002/11/7 ¤U¤È 03:00:28
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   DbColumnType.java
+
+package changeDb2;
+
+import java.io.PrintStream;
+import tools.StringReplace;
+
+public class DbColumnType
+{
+
+    public DbColumnType()
+    {
+        value_list = "";
+        replace = new StringReplace();
+    }
+
+    public String getTypeString(String s, int i, String dbMode)
+    {
+        if(i == 12 || i == 2 || i == 4 || i == -6)
+            if(s == null || s.trim().equals(""))
+                value_list = "' ',";
+            else
+                try
+                {
+                    if(dbMode.equals("MYSQL"))
+                        value_list = replace.string_Replace(new String(s.getBytes(), "ISO8859_1"), "'", "''", "all");
+                    else
+                        value_list = replace.string_Replace(s, "'", "''", "all");
+                    value_list = "'" + replace.string_Replace(value_list, "\u2027", "\u3001", "all") + "',";
+                }
+                catch(Exception e)
+                {
+                    System.out.println(e);
+                }
+        if(i == 91)
+            if(s == null || s.equals("0000-00-00 00:00:00") || s.equals("0000-00-00"))
+                value_list = "NULL,";
+            else
+                value_list = "TO_DATE('" + s + "','YYYY-MM-DD HH24:MI:SS')" + ",";
+        if(i == 93)
+            if(s == null)
+                value_list = "NULL,";
+            else
+                value_list = "'" + s.toString() + "',";
+        return value_list;
+    }
+
+    String value_list;
+    StringReplace replace;
+}

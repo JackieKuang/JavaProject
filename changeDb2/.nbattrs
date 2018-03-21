@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="ChangeDBThread.java">
+        <attr name="class_dependency_java.lang.Thread" stringvalue="ChangeDBThread"/>
+    </fileobject>
+    <fileobject name="setup.conf">
+        <attr name="org.netbeans.modules.text.IsTextFile" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="MessageDialog.java">
+        <attr name="class_dependency_java.awt.Dialog" stringvalue="MessageDialog"/>
+        <attr name="class_dependency_java.awt.event.WindowListener" stringvalue="MessageDialog"/>
+        <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="MessageDialog"/>
+    </fileobject>
+    <fileobject name="StartDialog.java">
+        <attr name="class_dependency_java.awt.Dialog" stringvalue="StartDialog"/>
+        <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="StartDialog"/>
+    </fileobject>
+    <fileobject name="ChangeDbMain.java">
+        <attr name="class_dependency_java.awt.Frame" stringvalue="ChangeDbMain"/>
+        <attr name="class_dependency_java.awt.event.WindowListener" stringvalue="ChangeDbMain"/>
+        <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="ChangeDbMain"/>
+    </fileobject>
+    <fileobject name="SkemaMessage.java">
+        <attr name="class_dependency_java.awt.Dialog" stringvalue="SkemaMessage"/>
+        <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="SkemaMessage"/>
+        <attr name="class_dependency_java.lang.Runnable" stringvalue="SkemaMessage"/>
+    </fileobject>
+</attributes>

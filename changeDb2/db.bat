@@ -1,0 +1,1 @@
+java -mx500m changeDb2.ChangeDbMain
