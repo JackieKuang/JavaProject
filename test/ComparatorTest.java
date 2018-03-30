@@ -16,7 +16,7 @@ public class ComparatorTest {
 		
 		t1.put("name","1");
 		t1.put("val","5.67");
-		
+		 
 		t2.put("name","2");
 		t2.put("val","1.38");
 		
